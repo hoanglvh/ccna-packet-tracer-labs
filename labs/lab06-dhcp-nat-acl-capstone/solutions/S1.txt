@@ -1,0 +1,62 @@
+! ===== Lab 06 - S1 final configuration =====
+hostname S1
+no ip domain-lookup
+enable secret class
+!
+vlan 10
+ name USERS
+vlan 20
+ name GUEST
+vlan 30
+ name SERVERS
+vlan 99
+ name MANAGEMENT
+vlan 999
+ name PARKING
+vlan 1000
+ name NATIVE
+!
+ip dhcp snooping
+ip dhcp snooping vlan 10,20
+no ip dhcp snooping information option
+!
+interface FastEthernet0/2
+ description Admin-PC
+ switchport mode access
+ switchport access vlan 99
+interface range FastEthernet0/6 - 7
+ description Users
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ ip dhcp snooping limit rate 10
+interface FastEthernet0/11
+ description Guest
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+ ip dhcp snooping limit rate 10
+interface FastEthernet0/24
+ description Int-Server
+ switchport mode access
+ switchport access vlan 30
+interface GigabitEthernet0/1
+ description Trunk to R1
+ switchport mode trunk
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99,1000
+ switchport nonegotiate
+ ip dhcp snooping trust
+!
+interface range FastEthernet0/1 , FastEthernet0/3 - 5 , FastEthernet0/8 - 10 , FastEthernet0/12 - 23 , GigabitEthernet0/2
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface Vlan99
+ ip address 192.168.99.11 255.255.255.0
+ no shutdown
+ip default-gateway 192.168.99.1
+!
+end
+copy running-config startup-config

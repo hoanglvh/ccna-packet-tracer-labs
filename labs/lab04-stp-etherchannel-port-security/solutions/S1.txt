@@ -1,0 +1,74 @@
+! ===== Lab 04 - S1 final configuration =====
+hostname S1
+no ip domain-lookup
+enable secret class
+line console 0
+ password cisco
+ login
+ logging synchronous
+ exit
+!
+vlan 10
+ name STAFF
+vlan 20
+ name VOICE-LAB
+vlan 99
+ name MANAGEMENT
+vlan 999
+ name PARKING
+vlan 1000
+ name NATIVE
+!
+spanning-tree mode rapid-pvst
+port-channel load-balance src-dst-mac
+spanning-tree vlan 1,10,99,1000 root primary
+spanning-tree vlan 20 root secondary
+!
+interface range FastEthernet0/1 - 2
+ switchport mode trunk
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,99,1000
+ switchport nonegotiate
+ channel-group 1 mode active
+ no shutdown
+interface Port-channel1
+ switchport mode trunk
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,99,1000
+ switchport nonegotiate
+!
+interface range FastEthernet0/3 - 4
+ switchport mode trunk
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,99,1000
+ switchport nonegotiate
+ channel-group 2 mode active
+ no shutdown
+interface Port-channel2
+ switchport mode trunk
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,99,1000
+ switchport nonegotiate
+!
+! The sticky MAC address of the PC is learned automatically and appears in running-config.
+interface range FastEthernet0/6
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security violation shutdown
+!
+interface range FastEthernet0/5 , FastEthernet0/7 - 24 , GigabitEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface Vlan99
+ ip address 192.168.99.1 255.255.255.0
+ no shutdown
+!
+end
+copy running-config startup-config

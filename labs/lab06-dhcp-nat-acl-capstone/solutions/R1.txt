@@ -1,0 +1,92 @@
+! ===== Lab 06 - R1 final configuration =====
+hostname R1
+no ip domain-lookup
+enable secret class
+service password-encryption
+ip domain-name ccna-lab.com
+username admin secret Cisco123!
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+!
+ip dhcp excluded-address 192.168.10.1 192.168.10.10
+ip dhcp pool USERS
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 203.0.113.10
+ domain-name ccna-lab.com
+ exit
+!
+ip access-list standard VTY-ADMIN
+ remark Only management VLAN may manage R1
+ permit 192.168.99.0 0.0.0.255
+ exit
+ip access-list extended GUEST-POLICY
+ remark Guest VLAN 20 - Internet only
+ permit udp any any eq bootps
+ permit udp 192.168.20.0 0.0.0.255 any eq domain
+ deny ip 192.168.20.0 0.0.0.255 192.168.0.0 0.0.255.255
+ permit tcp 192.168.20.0 0.0.0.255 any eq www
+ permit tcp 192.168.20.0 0.0.0.255 any eq 443
+ permit icmp 192.168.20.0 0.0.0.255 any echo
+ exit
+ip access-list extended SERVER-PROTECT
+ permit tcp any host 192.168.30.10 eq www
+ permit tcp any host 192.168.30.10 eq 443
+ permit icmp 192.168.10.0 0.0.0.255 host 192.168.30.10 echo
+ permit ip 192.168.99.0 0.0.0.255 192.168.30.0 0.0.0.255
+ deny ip any any
+ exit
+access-list 1 remark Inside hosts allowed to use PAT
+access-list 1 permit 192.168.10.0 0.0.0.255
+access-list 1 permit 192.168.20.0 0.0.0.255
+!
+interface GigabitEthernet0/0/0
+ description To ISP
+ ip address 209.165.200.226 255.255.255.248
+ ip nat outside
+ no shutdown
+!
+interface GigabitEthernet0/0/1
+ description Trunk to S1 G0/1
+ no shutdown
+interface GigabitEthernet0/0/1.10
+ description USERS
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ ip nat inside
+interface GigabitEthernet0/0/1.20
+ description GUEST
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ ip helper-address 192.168.30.10
+ ip nat inside
+ ip access-group GUEST-POLICY in
+interface GigabitEthernet0/0/1.30
+ description SERVERS
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+ ip nat inside
+ ip access-group SERVER-PROTECT out
+interface GigabitEthernet0/0/1.99
+ description MANAGEMENT
+ encapsulation dot1Q 99
+ ip address 192.168.99.1 255.255.255.0
+interface GigabitEthernet0/0/1.1000
+ description Native VLAN - no IP
+ encapsulation dot1Q 1000 native
+!
+ip nat inside source static 192.168.30.10 209.165.200.230
+ip nat inside source list 1 interface GigabitEthernet0/0/0 overload
+ip route 0.0.0.0 0.0.0.0 209.165.200.225
+!
+line console 0
+ password cisco
+ login
+ logging synchronous
+line vty 0 4
+ access-class VTY-ADMIN in
+ transport input ssh
+ login local
+!
+end
+copy running-config startup-config

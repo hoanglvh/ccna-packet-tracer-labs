@@ -1,0 +1,40 @@
+! ===== Lab 01 - S2 final configuration =====
+hostname S2
+no ip domain-lookup
+ip domain-name ccna-lab.com
+enable secret class
+service password-encryption
+username admin secret Cisco123!
+banner motd #Unauthorized access is strictly prohibited!#
+!
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+!
+interface FastEthernet0/6
+ description Link to PC2
+!
+interface GigabitEthernet0/1
+ description Link to R1 G0/0/1
+!
+interface range FastEthernet0/1 - 5 , FastEthernet0/7 - 24 , GigabitEthernet0/2
+ shutdown
+!
+interface Vlan1
+ description Management SVI
+ ip address 192.168.20.11 255.255.255.0
+ no shutdown
+!
+ip default-gateway 192.168.20.1
+!
+line console 0
+ password cisco
+ login
+ logging synchronous
+ exec-timeout 10 0
+!
+line vty 0 15
+ transport input ssh
+ login local
+!
+end
+copy running-config startup-config

@@ -1,0 +1,35 @@
+! ===== Lab 05 - R2 final configuration (OSPF, end of Part 4) =====
+hostname R2
+no ip domain-lookup
+enable secret class
+line console 0
+ password cisco
+ login
+ logging synchronous
+ exit
+!
+router ospf 10
+ router-id 2.2.2.2
+ auto-cost reference-bandwidth 10000
+ passive-interface GigabitEthernet0/0/0
+!
+interface GigabitEthernet0/0/0
+ description LAN2
+ ip address 192.168.2.1 255.255.255.0
+ ip ospf 10 area 0
+ no shutdown
+interface GigabitEthernet0/0/1
+ description to R1
+ ip address 10.0.12.2 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf 10 area 0
+ no shutdown
+interface GigabitEthernet0/0/2
+ description to R3
+ ip address 10.0.23.1 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf 10 area 0
+ no shutdown
+!
+end
+copy running-config startup-config

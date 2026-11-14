@@ -1,0 +1,21 @@
+! ===== Lab 03 - S3 final configuration =====
+hostname S3
+no ip domain-lookup
+enable secret class
+!
+vlan 10
+ name SALES
+vlan 20
+ name ENGINEERING
+!
+interface FastEthernet0/6
+ switchport mode access
+ switchport access vlan 10
+interface FastEthernet0/11
+ switchport mode access
+ switchport access vlan 20
+interface GigabitEthernet0/1
+ switchport mode trunk
+!
+end
+copy running-config startup-config

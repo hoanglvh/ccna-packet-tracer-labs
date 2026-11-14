@@ -1,0 +1,41 @@
+! ===== Lab 05 - R3 final configuration (OSPF, end of Part 4) =====
+hostname R3
+no ip domain-lookup
+enable secret class
+line console 0
+ password cisco
+ login
+ logging synchronous
+ exit
+!
+interface GigabitEthernet0/0/0
+ description to ISP
+ ip address 209.165.200.226 255.255.255.252
+ no shutdown
+interface GigabitEthernet0/0/1
+ description to R1
+ ip address 10.0.13.2 255.255.255.252
+ ip ospf network point-to-point
+ no shutdown
+interface GigabitEthernet0/0/2
+ description to R2
+ ip address 10.0.23.2 255.255.255.252
+ ip ospf network point-to-point
+ no shutdown
+interface Loopback0
+ description Simulated LAN
+ ip address 192.168.3.1 255.255.255.0
+ ip ospf network point-to-point
+!
+router ospf 10
+ router-id 3.3.3.3
+ auto-cost reference-bandwidth 10000
+ network 10.0.13.0 0.0.0.3 area 0
+ network 10.0.23.0 0.0.0.3 area 0
+ network 192.168.3.0 0.0.0.255 area 0
+ default-information originate
+!
+ip route 0.0.0.0 0.0.0.0 209.165.200.225
+!
+end
+copy running-config startup-config

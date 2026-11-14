@@ -1,0 +1,43 @@
+! ===== Lab 01 - R1 final configuration =====
+hostname R1
+no ip domain-lookup
+ip domain-name ccna-lab.com
+enable secret class
+service password-encryption
+username admin secret Cisco123!
+login block-for 120 attempts 3 within 60
+banner motd #Unauthorized access is strictly prohibited!#
+!
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+ip ssh time-out 60
+ip ssh authentication-retries 3
+!
+interface GigabitEthernet0/0/0
+ description LAN 192.168.10.0/24 - S1
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/0/1
+ description LAN 192.168.20.0/24 - S2
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/0/2
+ shutdown
+!
+line console 0
+ password cisco
+ login
+ logging synchronous
+ exec-timeout 3 0
+!
+line vty 0 4
+ transport input ssh
+ login local
+ exec-timeout 5 0
+!
+! applied last so the short lab passwords above are accepted
+security passwords min-length 8
+end
+copy running-config startup-config
