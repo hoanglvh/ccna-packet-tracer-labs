@@ -51,6 +51,7 @@ ccna-packet-tracer-labs/
     └── lab06-dhcp-nat-acl-capstone/
 
 tools/generate_topologies.py      ← regenerates every labs/*/images/topology.svg
+tools/verify_solutions.py         ← offline simulator that checks every solution config
 ```
 
 Each lab guide contains:
@@ -78,6 +79,7 @@ Each lab guide contains:
 
 - Read [docs/instructor-guide.md](docs/instructor-guide.md) for timing, grading rubric, and the most common student mistakes.
 - Final configurations for every device are in each lab's `solutions/` folder. You can paste them into a device's CLI to build a reference `.pkt` quickly.
+- After editing a solution, run `python3 tools/verify_solutions.py` (or e.g. `python3 tools/verify_solutions.py 6` for one lab). It rebuilds each topology offline and simulates VLANs, trunks, EtherChannel, STP root election, static routing, OSPF, NAT/PAT, ACLs, DHCP and SSH, then runs the connectivity tests promised by the guides. It does not replace a final check in Packet Tracer (it cannot detect commands that a specific PT version rejects).
 
 ---
 
