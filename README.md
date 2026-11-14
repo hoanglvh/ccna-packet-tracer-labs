@@ -116,4 +116,16 @@ All labs use models available in every Packet Tracer 8.x installation:
 | Multilayer switch | **3650-24PS** | `G1/0/1-24` (needs a power supply module – see Lab 3) |
 | End devices | PC-PT, Server-PT, Laptop-PT | `Fa0` |
 
+### Tested in Packet Tracer 8.2.2
+
+Every command in the `solutions/` configs (plus the challenge and `show` commands used in the guides) was pasted into a real ISR4331, 2960-24TT and 3650-24PS in Packet Tracer 8.2.2. Commands that PT 8.2.2 rejects were removed or replaced, and the guides point them out:
+
+| Rejected by PT 8.2.2 | Used instead |
+|----------------------|--------------|
+| `ip route <net> <mask> <interface> <next-hop>` (fully specified) | next-hop static route |
+| `switchport trunk encapsulation dot1q` on the 3650 | `switchport mode trunk` alone |
+| `lease` in a DHCP pool, `errdisable recovery ...` | omitted (mentioned as real-IOS only) |
+| `show vlans`, `show interfaces description`, `show ip dhcp server statistics`, `show mac address-table vlan N`, `show interfaces status err-disabled` | equivalent commands that PT supports |
+| `\| include` after most `show` commands | full output (pipes work after `show running-config`) |
+
 > 💡 If your Packet Tracer version uses a different router model (e.g. 2911 with `G0/0`, `G0/1`, `G0/2`), simply replace the interface names.

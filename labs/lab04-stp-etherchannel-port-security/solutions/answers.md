@@ -13,7 +13,7 @@ With 3 switches and 6 links, a loop-free tree needs only **2** links. Before tun
 | F1 | Po1 down `(SD)`, traffic takes S1–S3–S2 | `show etherchannel summary` | Set one side to `active` |
 | F2 | S3 becomes root for VLAN 10; suboptimal paths | `show spanning-tree vlan 10` | `no spanning-tree vlan 10 priority 0` (and Root Guard, see challenge) |
 | F3 | Fa0/2 shows `(s)` suspended or `(I)` in Po3 | `show etherchannel summary`, `show run int f0/2` | Make member settings identical to the port-channel |
-| F4 | PC1 isolated, port `err-disabled` | `show interfaces status err-disabled`, `show port-security` | Remove offending device, `shutdown`/`no shutdown` |
+| F4 | PC1 isolated, port `err-disabled` | `show interfaces status`, `show port-security` | Remove offending device, `shutdown`/`no shutdown` |
 | F5 | Po3 down: auto + auto never forms | `show etherchannel summary` | One side `desirable` |
 | F6 | PC4 can't reach PC2 | `show vlan brief` | `switchport access vlan 20` on S3 F0/18 |
 

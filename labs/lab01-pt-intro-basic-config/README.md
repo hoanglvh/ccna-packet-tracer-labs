@@ -389,7 +389,7 @@ L    192.168.10.1/32 is directly connected, GigabitEthernet0/0/0
 C    192.168.20.0/24 is directly connected, GigabitEthernet0/0/1
 L    192.168.20.1/32 is directly connected, GigabitEthernet0/0/1
 
-R1# show interfaces description
+R1# show running-config | include description
 ```
 
 > 💡 **C** = connected network, **L** = local host route (the router's own address).

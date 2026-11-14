@@ -229,13 +229,12 @@ R1(dhcp-config)# network 192.168.10.0 255.255.255.0
 R1(dhcp-config)# default-router 192.168.10.1
 R1(dhcp-config)# dns-server 203.0.113.10
 R1(dhcp-config)# domain-name ccna-lab.com
-R1(dhcp-config)# lease 2
 R1(dhcp-config)# exit
 ```
 
 > 💡 DHCP **DORA**: Discover (broadcast) → Offer → Request (broadcast) → Acknowledge. The router answers Discovers arriving on G0/0/1.10 because that subinterface's subnet matches the pool network.
 >
-> ⚠️ `domain-name` and `lease` may not be supported in some Packet Tracer versions – skip them if rejected.
+> 💡 Real IOS also lets you set the lease time (`lease 2` = 2 days), but Packet Tracer 8.2.2 rejects that command, so it is left out.
 
 ### Step 6: Verify
 
@@ -255,7 +254,6 @@ IP address       Client-ID/              Lease expiration        Type
 192.168.10.11    0001.6411.xxxx          --                      Automatic
 192.168.10.12    0060.5c2b.xxxx          --                      Automatic
 R1# show ip dhcp pool
-R1# show ip dhcp server statistics
 ```
 
 Optional – watch DORA in **Simulation** mode with the **DHCP** filter while PC2 renews.

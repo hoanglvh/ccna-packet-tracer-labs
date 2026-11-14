@@ -200,8 +200,8 @@ S2(config)# spanning-tree vlan 1,10,99,1000 root secondary
 Verify:
 
 ```
-S1# show spanning-tree vlan 10 | include Root|Bridge
-S2# show spanning-tree vlan 20 | include Root|Bridge
+S1# show spanning-tree vlan 10      ! look for "This bridge is the root"
+S2# show spanning-tree vlan 20
 S3# show spanning-tree summary
 ```
 
@@ -262,7 +262,7 @@ S1(config-if)# end
 ```
 %SPANTREE-2-BLOCK_BPDUGUARD: Received BPDU on port FastEthernet0/24 with BPDU Guard enabled. Disabling port.
 %PM-4-ERR_DISABLE: bpduguard error detected on Fa0/24, putting Fa0/24 in err-disable state
-S3# show interfaces status err-disabled
+S3# show interfaces f0/24 status     ! Status column shows err-disabled
 ```
 
 4. Remove the rogue switch, then recover the port:
@@ -481,11 +481,12 @@ S1(config-if)# shutdown
 S1(config-if)# no shutdown
 ```
 
-> 💡 Optional automatic recovery (if supported by your PT version):
+> 💡 On real switches you can let IOS recover the port automatically:
 > ```
 > S1(config)# errdisable recovery cause psecure-violation
 > S1(config)# errdisable recovery interval 60
 > ```
+> Packet Tracer 8.2.2 does not support these commands (`% Invalid input`), so in the lab you always recover manually.
 
 ### Step 5: Secure all unused ports
 
@@ -514,7 +515,7 @@ show spanning-tree vlan 10
 show etherchannel summary
 show interfaces trunk
 show port-security
-show interfaces status err-disabled
+show interfaces status
 show mac address-table dynamic
 ```
 

@@ -94,7 +94,7 @@ IF_CMDS = [
     r'description .+', r'ip address \S+ \S+', r'ipv6 address \S+( link-local)?', r'(no )?shutdown',
     r'switchport mode (access|trunk|dynamic auto|dynamic desirable)', r'switchport access vlan \d+',
     r'switchport trunk native vlan \d+', r'switchport trunk allowed vlan (add )?[\d,\-]+',
-    r'switchport trunk encapsulation dot1q', r'switchport nonegotiate', r'no switchport',
+    r'switchport nonegotiate', r'no switchport',
     r'switchport port-security', r'switchport port-security maximum \d+',
     r'switchport port-security mac-address sticky', r'switchport port-security violation (protect|restrict|shutdown)',
     r'switchport port-security aging time \d+', r'encapsulation dot1Q \d+( native)?',
@@ -109,8 +109,7 @@ LINE_CMDS = [r'password \S+', r'login( local)?', r'logging synchronous', r'exec-
 OSPF_CMDS = [r'router-id \S+', r'network \S+ \S+ area \d+', r'passive-interface \S+',
              r'auto-cost reference-bandwidth \d+', r'default-information originate', r'exit']
 VLAN_CMDS = [r'name \S+', r'exit']
-POOL_CMDS = [r'network \S+ \S+', r'default-router \S+', r'dns-server \S+', r'domain-name \S+',
-             r'lease \d+', r'exit']
+POOL_CMDS = [r'network \S+ \S+', r'default-router \S+', r'dns-server \S+', r'domain-name \S+', r'exit']
 ACL_CMDS = [r'(\d+ )?(permit|deny) .+', r'remark .+', r'exit']
 
 
@@ -286,6 +285,9 @@ class Config:
                 exitif = norm(t)
             else:
                 nh = ipa.ip_address(t)
+        if exitif and nh:
+            self.unknown.append((0, f'fully specified route via {exitif} {nh} '
+                                    f'(Packet Tracer 8.2.2 accepts only a distance after the interface)'))
         return (net, nh, exitif, ad)
 
     def sub(self, ctx, target, s, n):
@@ -662,9 +664,6 @@ class Net:
         if mode == 'routed':
             return ('routed', None, None)
         if mode == 'trunk':
-            if d.kind == 'mls' and c.sw.get('mode') == 'trunk' and c.sw.get('encap') != 'dot1q':
-                self.errors.append(f'{d.name} {port}: 3650 needs "switchport trunk encapsulation dot1q" '
-                                   f'before "switchport mode trunk"')
             allowed = set(c.sw.get('allowed', range(1, 4095)))
             return ('trunk', c.sw.get('native', 1), allowed)
         v = c.sw.get('access', 1)

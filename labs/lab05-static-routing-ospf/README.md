@@ -5,7 +5,7 @@
 ## Objectives
 
 - Read and interpret the IPv4 routing table (codes, AD, metric, longest match).
-- Configure next-hop, fully specified, default and floating static routes.
+- Configure next-hop, directly attached, default and floating static routes.
 - Configure single-area OSPFv2 using network statements and interface commands.
 - Set router IDs and passive interfaces; advertise a default route into OSPF.
 - Tune OSPF: reference bandwidth, interface cost, timers, DR/BDR priority, point-to-point network type.
@@ -234,16 +234,25 @@ R1(config)# ip route 192.168.2.0 255.255.255.0 10.0.12.2
 R1(config)# ip route 10.0.23.0 255.255.255.252 10.0.12.2
 ```
 
-### Step 2: Fully specified static route on R1
+### Step 2: Static route to R3's LAN and the three static route forms
 
 ```
-R1(config)# ip route 192.168.3.0 255.255.255.0 g0/0/2 10.0.13.2
+R1(config)# ip route 192.168.3.0 255.255.255.0 10.0.13.2
+```
+
+Try the **directly attached** form on a test prefix and read the warning, then remove it:
+
+```
+R1(config)# ip route 192.168.33.0 255.255.255.0 g0/0/2
+%Default route without gateway, if not a point-to-point interface, may impact performance
+R1(config)# no ip route 192.168.33.0 255.255.255.0 g0/0/2
 ```
 
 > 💡 Three ways to write a static route:
 > - **Next-hop:** `ip route <net> <mask> <next-hop-ip>` – requires a recursive lookup.
 > - **Directly attached:** `ip route <net> <mask> <exit-int>` – fine on point-to-point serial, but on Ethernet it relies on proxy ARP. ⚠️ Avoid on Ethernet.
-> - **Fully specified:** `ip route <net> <mask> <exit-int> <next-hop-ip>` – recommended on multi-access links.
+> - **Fully specified:** `ip route <net> <mask> <exit-int> <next-hop-ip>` – recommended on multi-access links in real IOS.
+>   ⚠️ Packet Tracer 8.2.2 rejects this form on the ISR4331 (it accepts only a distance after the interface), so the lab uses next-hop routes.
 
 ### Step 3: Default routes
 
@@ -295,7 +304,7 @@ S*   0.0.0.0/0 [1/0] via 10.0.13.2
      10.0.0.0/8 is variably subnetted, 5 subnets, 2 masks
 S       10.0.23.0/30 [1/0] via 10.0.12.2
 S    192.168.2.0/24 [1/0] via 10.0.12.2
-S    192.168.3.0/24 [1/0] via 10.0.13.2, GigabitEthernet0/0/2
+S    192.168.3.0/24 [1/0] via 10.0.13.2
 ```
 
 | Test | Expected |
@@ -339,7 +348,7 @@ R1:
 R1(config)# no ip route 192.168.2.0 255.255.255.0 10.0.12.2
 R1(config)# no ip route 192.168.2.0 255.255.255.0 10.0.13.2 5
 R1(config)# no ip route 10.0.23.0 255.255.255.252 10.0.12.2
-R1(config)# no ip route 192.168.3.0 255.255.255.0 g0/0/2 10.0.13.2
+R1(config)# no ip route 192.168.3.0 255.255.255.0 10.0.13.2
 R1(config)# no ip route 0.0.0.0 0.0.0.0 10.0.13.2
 ```
 
@@ -483,7 +492,7 @@ PC1 → Web-Server `203.0.113.10` ✅. Open `http://203.0.113.10` in PC1's brows
 Default cost = 100 Mbps / interface bandwidth. A GigabitEthernet and a FastEthernet both get cost **1** – OSPF can't tell them apart.
 
 ```
-R1# show ip ospf interface g0/0/1 | include Cost
+R1# show ip ospf interface g0/0/1
   Process ID 10, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
 ```
 

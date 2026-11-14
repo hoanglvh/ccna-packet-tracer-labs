@@ -30,7 +30,7 @@ Verify with `show ipv6 ospf neighbor` and `show ipv6 route ospf`.
 
 ## Review Questions
 1. AD is the trustworthiness of a route source (lower = better). It is compared only when routes have the **same prefix length**. A static route (AD 1) beats OSPF (AD 110).
-2. On a multi-access network, a route with only an exit interface makes the router ARP for every destination (relying on proxy ARP). A fully specified route names the exit interface **and** the next hop, so no recursive lookup and no proxy ARP is needed.
+2. On a multi-access network, a route with only an exit interface makes the router ARP for every destination (relying on proxy ARP). A fully specified route names the exit interface **and** the next hop, so no recursive lookup and no proxy ARP is needed. (Packet Tracer 8.2.2 does not accept this form on the ISR4331, which is why the lab uses next-hop routes.)
 3. It's a static route configured with an AD higher than the primary route. It is installed only when the primary route is removed from the routing table (e.g. the link goes down).
 4. (1) Manually configured `router-id`; (2) highest IPv4 address of any loopback; (3) highest IPv4 address of any active physical interface. A changed RID only takes effect after `clear ip ospf process` or reload.
 5. It stops sending OSPF Hellos out of an interface while still advertising its network. Benefits: no unnecessary OSPF traffic on LANs (bandwidth/CPU), and security – nobody on the LAN can form an adjacency and inject routes.

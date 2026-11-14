@@ -9,7 +9,7 @@ A packet from PC3 (VLAN 10) to PC2 (VLAN 20) crosses the S1–R1 trunk **twice**
 | F1 | PC4 can't reach its gateway / anything | `show vlan brief` on S2 | `switchport access vlan 20` on F0/11 |
 | F2 | PC5 isolated | `show interfaces trunk` – VLAN 30 missing on S1 Fa0/1 | `switchport trunk allowed vlan add 30` |
 | F3 | `%CDP-4-NATIVE_VLAN_MISMATCH` messages | `show interfaces trunk` (native 1 vs 1000) | `switchport trunk native vlan 1000` |
-| F4 | VLAN 20 hosts can't reach gateway | `show vlans` / `show run int g0/0/1.20` on R1 | `encapsulation dot1Q 20` |
+| F4 | VLAN 20 hosts can't reach gateway | `show running-config | include encapsulation` on R1 | `encapsulation dot1Q 20` |
 | F5 | PC4 isolated, F0/11 missing from `show vlan brief` | `show interfaces f0/11 switchport` → "Access Mode VLAN: 20 (Inactive)" | `vlan 20` → `name ENGINEERING` |
 | F6 | No inter-VLAN routing at all | `show interfaces trunk` – G0/1 missing | `switchport mode trunk` + native/allowed settings |
 | F7 | PC6 ↔ PC7 fails, gateways pingable | `show ip route` – "IP routing not enabled" | `ip routing` |

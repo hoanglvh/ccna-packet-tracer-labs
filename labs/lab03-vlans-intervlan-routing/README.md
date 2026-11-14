@@ -400,7 +400,7 @@ GigabitEthernet0/0/1.30   192.168.30.1    YES manual up      up
 GigabitEthernet0/0/1.99   192.168.99.1    YES manual up      up
 GigabitEthernet0/0/1.1000 unassigned      YES unset  up      up
 
-R1# show vlans          ! shows each 802.1Q VLAN and its subinterface
+R1# show running-config | include encapsulation   ! one dot1Q line per subinterface
 R1# show ip route connected
 ```
 
@@ -473,12 +473,13 @@ MLS1(config-vlan)# vlan 20
 MLS1(config-vlan)# name ENGINEERING
 MLS1(config-vlan)# exit
 MLS1(config)# interface g1/0/1
-MLS1(config-if)# switchport trunk encapsulation dot1q
 MLS1(config-if)# switchport mode trunk
 MLS1(config-if)# exit
 ```
 
-> 💡 Multilayer switches support ISL and 802.1Q, so you must choose the encapsulation **before** forcing trunk mode.
+> 💡 The 3650 supports only 802.1Q, so `switchport mode trunk` is all it needs. Older multilayer switches that also
+> support ISL (such as the 3560) require `switchport trunk encapsulation dot1q` first – on the 3650 in Packet Tracer
+> that command is rejected with `% Invalid input`.
 
 ### Step 4: Configure the SVIs and enable routing
 
@@ -527,7 +528,7 @@ R1(config)# ip route 172.16.0.0 255.255.0.0 10.0.0.2
 ### Step 6: Verify
 
 ```
-MLS1# show ip interface brief | include up
+MLS1# show ip interface brief
 MLS1# show ip route
 C    10.0.0.0/30 is directly connected, GigabitEthernet1/0/24
 C    172.16.10.0/24 is directly connected, Vlan10
@@ -554,7 +555,7 @@ From PC6: `ping 192.168.10.10` (PC1) and `tracert 192.168.30.10` (PC5) → path 
 | `show interfaces f0/6 switchport` | Administrative vs. operational mode, access VLAN |
 | `show ip interface brief` (R1) | Subinterfaces up/up? |
 | `show running-config interface g0/0/1.20` | Correct `encapsulation dot1Q` ID? |
-| `show mac address-table vlan 10` | Which MACs learned on which ports |
+| `show mac address-table` | Which MACs learned on which ports and VLANs |
 
 ### Step 2: Troubleshooting challenge
 
