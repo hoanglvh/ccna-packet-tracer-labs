@@ -171,8 +171,14 @@ Address assignment rules for this lab:
 ### Step 4: Build the topology
 
 1. Place 2 × **4331**, 3 × **2960**, 3 × **PC**. Rename them R1, R2, SW-A, SW-B, SW-C, PC-A, PC-B, PC-C.
-2. Cable them according to the cabling table above. Note the **cross-over** cable between R1 and R2.
-3. Save as `lab02-<your-name>.pkt`.
+2. Insert a **GLC-T** module into G0/0/2 on **R1 and R2** (see the warning below).
+3. Cable them according to the cabling table above. Note the **cross-over** cable between R1 and R2.
+4. Save as `lab02-<your-name>.pkt`.
+
+> ⚠️ **G0/0/2 needs a transceiver.** On the ISR4331 in Packet Tracer, `GigabitEthernet0/0/2` is an empty **SFP slot**
+> (it does not appear in the cable's port list). For each router that uses G0/0/2: click the router → **Physical** tab →
+> **Zoom In** twice → select **GLC-T** in the MODULES list → drag the module picture (bottom-right) onto the slot
+> labelled **GE 0/0/2** (bottom-right port of the port block). No power-off is needed. G0/0/2 then accepts copper cables.
 
 ✅ **Checkpoint 2:** Instructor approves the VLSM worksheet; topology cabled.
 

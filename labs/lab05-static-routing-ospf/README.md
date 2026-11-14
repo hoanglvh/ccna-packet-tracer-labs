@@ -78,6 +78,13 @@
 
 ### Step 1: Build and cable
 
+Insert a **GLC-T** module into G0/0/2 on **R1, R2 and R3** first – all three use G0/0/2 for router-to-router links.
+
+> ⚠️ **G0/0/2 needs a transceiver.** On the ISR4331 in Packet Tracer, `GigabitEthernet0/0/2` is an empty **SFP slot**
+> (it does not appear in the cable's port list). For each router that uses G0/0/2: click the router → **Physical** tab →
+> **Zoom In** twice → select **GLC-T** in the MODULES list → drag the module picture (bottom-right) onto the slot
+> labelled **GE 0/0/2** (bottom-right port of the port block). No power-off is needed. G0/0/2 then accepts copper cables.
+
 | From | Port | To | Port | Cable |
 |------|------|----|------|-------|
 | PC1 | Fa0 | S1 | F0/1 | Straight |

@@ -41,6 +41,7 @@ Each `solutions/` folder contains the **final running configuration** for every 
 |-----|---------|-------------|
 | All | Configuration lost after closing PT | Did not save `.pkt` (or `copy run start` for device restarts) |
 | All | Router interface red | Forgot `no shutdown` |
+| 2, 3, 5 | G0/0/2 missing from the cable's port list | No **GLC-T** SFP module in the ISR4331's GE 0/0/2 slot |
 | All | `Translating "xyz"...domain server` | Typo in EXEC mode, `no ip domain-lookup` missing |
 | 1 | Cannot SSH | Missing `ip domain-name`, RSA key < 768 bits, `login local` without a username |
 | 2 | Hosts can ping gateway but not remote LAN | Missing/incorrect static route, wrong mask |

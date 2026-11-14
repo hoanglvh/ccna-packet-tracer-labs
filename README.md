@@ -111,14 +111,14 @@ All labs use models available in every Packet Tracer 8.x installation:
 
 | Role | Model | Interfaces used |
 |------|-------|-----------------|
-| Router | **ISR4331** | `G0/0/0`, `G0/0/1`, `G0/0/2` |
+| Router | **ISR4331** | `G0/0/0`, `G0/0/1`, `G0/0/2` (G0/0/2 is an SFP slot: insert a **GLC-T** module first) |
 | Access switch | **2960-24TT** | `F0/1-24`, `G0/1-2` |
 | Multilayer switch | **3650-24PS** | `G1/0/1-24` (needs a power supply module – see Lab 3) |
 | End devices | PC-PT, Server-PT, Laptop-PT | `Fa0` |
 
 ### Tested in Packet Tracer 8.2.2
 
-Every command in the `solutions/` configs (plus the challenge and `show` commands used in the guides) was pasted into a real ISR4331, 2960-24TT and 3650-24PS in Packet Tracer 8.2.2. Commands that PT 8.2.2 rejects were removed or replaced, and the guides point them out:
+Every command in the `solutions/` configs (plus the challenge and `show` commands used in the guides) was pasted into a real ISR4331, 2960-24TT and 3650-24PS in Packet Tracer 8.2.2. In addition, **all six labs were built end-to-end in Packet Tracer 8.2.2** (topology, cabling, solution configs, end devices and servers) and every lab's key connectivity and policy tests passed: pings across VLANs/routers/OSPF, IPv6 SLAAC, EtherChannel/STP, DHCP + relay + snooping, PAT/static NAT, ACL isolation, DNS/HTTP and SSH restrictions. Commands that PT 8.2.2 rejects were removed or replaced, and the guides point them out:
 
 | Rejected by PT 8.2.2 | Used instead |
 |----------------------|--------------|

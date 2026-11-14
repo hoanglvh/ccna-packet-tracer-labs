@@ -432,7 +432,14 @@ Router-on-a-Stick is limited by the bandwidth of one physical link. Enterprise n
 
 1. Place a **3650-24PS** (rename **MLS1**), a **2960** (**S3**) and two PCs (**PC6**, **PC7**).
 2. ⚠️ The 3650 ships **without a power supply** in Packet Tracer: click **MLS1 → Physical**, drag **AC-POWER-SUPPLY** into the empty power slot on the rear panel. The device boots.
+   Also insert a **GLC-T** module into **R1 G0/0/2** (see the warning below) before cabling R1 to MLS1.
 3. Cable:
+
+> ⚠️ **G0/0/2 needs a transceiver.** On the ISR4331 in Packet Tracer, `GigabitEthernet0/0/2` is an empty **SFP slot**
+> (it does not appear in the cable's port list). For each router that uses G0/0/2: click the router → **Physical** tab →
+> **Zoom In** twice → select **GLC-T** in the MODULES list → drag the module picture (bottom-right) onto the slot
+> labelled **GE 0/0/2** (bottom-right port of the port block). No power-off is needed. G0/0/2 then accepts copper cables.
+
 
 | From | Port | To | Port | Cable |
 |------|------|----|------|-------|

@@ -97,3 +97,6 @@ Use **Desktop → Command Prompt** for `ping`, `tracert`, `ipconfig /all`, `arp 
 - **Options → Preferences → Show Port Labels When Mouse Over / Always Show Port Labels** – very useful.
 - **Options → Preferences → Hide → uncheck "Hide Link Lights"** if link lights are not shown.
 - Adding modules to a device: click device → **Physical** tab → turn the **power switch off**, drag module into slot, turn power back **on**.
+- **ISR4331 G0/0/2** is an SFP slot: drag a **GLC-T** module onto the slot labelled *GE 0/0/2* before cabling it (no power-off needed).
+- On a PC, set addresses in **Desktop → IP Configuration**. The command-prompt form `ipconfig <ip> <mask> <gw>` sets the address but
+  leaves the default gateway at 0.0.0.0 in Packet Tracer 8.2.2.

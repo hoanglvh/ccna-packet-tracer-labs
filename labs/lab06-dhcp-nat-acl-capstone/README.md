@@ -155,6 +155,7 @@ S1(config-if)# spanning-tree portfast
 S1(config-if)# interface f0/24
 S1(config-if)# switchport mode access
 S1(config-if)# switchport access vlan 30
+S1(config-if)# spanning-tree portfast
 S1(config-if)# interface g0/1
 S1(config-if)# switchport mode trunk
 S1(config-if)# switchport trunk native vlan 1000
@@ -293,6 +294,9 @@ R1(config-subif)# end
 > 💡 The router receives the broadcast Discover on G0/0/1.20, and forwards it as a **unicast** to 192.168.30.10, filling the **giaddr** field with 192.168.20.1. The server uses giaddr to choose the right pool.
 
 Guest-Laptop → DHCP → ✅ address `192.168.20.11`, gateway `192.168.20.1`.
+
+> 💡 If the laptop shows `DHCP failed. APIPA is being used` (169.254.x.x), the server's switch port may still be in STP
+> listening/learning. Wait a few seconds (or click **Fast Forward Time**), switch to **Static** and back to **DHCP**.
 
 ### Step 3: Attack – add a rogue DHCP server
 

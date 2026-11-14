@@ -40,6 +40,7 @@ interface FastEthernet0/24
  description Int-Server
  switchport mode access
  switchport access vlan 30
+ spanning-tree portfast
 interface GigabitEthernet0/1
  description Trunk to R1
  switchport mode trunk
