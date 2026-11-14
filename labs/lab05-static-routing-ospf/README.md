@@ -22,6 +22,11 @@
 
 ## Topology
 
+![Lab 05 topology](images/topology.svg)
+
+<details>
+<summary>Text version of the topology</summary>
+
 ```
      PC1 --- S1 ---G0/0/0                                G0/0/0--- S2 --- PC2
    192.168.1.0/24  +------+  G0/0/1   10.0.12.0/30  G0/0/1 +------+  192.168.2.0/24
@@ -42,6 +47,8 @@
                                         |   203.0.113.0/24
                                    Web-Server 203.0.113.10
 ```
+
+</details>
 
 ## Addressing Table
 

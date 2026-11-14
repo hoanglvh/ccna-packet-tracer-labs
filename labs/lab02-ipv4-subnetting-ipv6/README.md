@@ -21,6 +21,11 @@
 
 ## Topology
 
+![Lab 02 topology](images/topology.svg)
+
+<details>
+<summary>Text version of the topology</summary>
+
 ```
      LAN-A (100 hosts)                                    LAN-C (20 hosts)
   PC-A --- SW-A ---G0/0/0                        G0/0/0--- SW-C --- PC-C
@@ -30,6 +35,8 @@
   PC-B --- SW-B ---G0/0/1
      LAN-B (50 hosts)
 ```
+
+</details>
 
 Cabling (all PCs to `F0/1` of their switch, switches to routers via `G0/1`):
 

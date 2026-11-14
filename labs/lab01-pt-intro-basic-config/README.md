@@ -24,12 +24,19 @@ After completing this lab you will be able to:
 
 ## Topology
 
+![Lab 01 topology](images/topology.svg)
+
+<details>
+<summary>Text version of the topology</summary>
+
 ```
                          G0/0/0           G0/0/1
           192.168.10.0/24 +-------------+ 192.168.20.0/24
    PC1 ------- S1 --------|     R1      |-------- S2 ------- PC2
       Fa0   F0/6   G0/1   +-------------+   G0/1   F0/6   Fa0
 ```
+
+</details>
 
 ## Addressing Table
 

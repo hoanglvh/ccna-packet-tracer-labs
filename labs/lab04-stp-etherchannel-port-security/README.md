@@ -21,6 +21,11 @@
 
 ## Topology
 
+![Lab 04 topology](images/topology.svg)
+
+<details>
+<summary>Text version of the topology</summary>
+
 ```
                               +------+
                               |  S1  |
@@ -35,6 +40,8 @@
        PC1 on S1 F0/6 (VLAN 10)        PC3 on S3 F0/6  (VLAN 10)
        PC2 on S2 F0/18 (VLAN 20)       PC4 on S3 F0/18 (VLAN 20)
 ```
+
+</details>
 
 Inter-switch cabling (all **Copper Cross-Over**):
 

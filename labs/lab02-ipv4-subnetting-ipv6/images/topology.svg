@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 500" width="1040" height="500" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#fff"/></marker></defs>
+<rect width="1040" height="500" fill="#ffffff"/>
+<rect x="0.5" y="0.5" width="1039" height="499" fill="none" stroke="#d0d7de"/>
+<text x="16.0" y="26.0" font-size="15" font-weight="700" fill="#13548f" text-anchor="start" style="">Lab 02 – IPv4 VLSM &amp; IPv6 Addressing</text>
+<line x1="60.0" y1="120.0" x2="230.0" y2="120.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="96.0" cy="120.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="184.0" cy="120.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="230.0" y1="120.0" x2="420.0" y2="225.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="270.3" cy="142.2" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="385.0" cy="205.7" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="60.0" y1="330.0" x2="230.0" y2="330.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="96.0" cy="330.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="184.0" cy="330.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="230.0" y1="330.0" x2="420.0" y2="225.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="270.3" cy="307.8" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="385.0" cy="244.3" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="420.0" y1="225.0" x2="680.0" y2="225.0" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="460.0" cy="225.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="640.0" cy="225.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="680.0" y1="225.0" x2="840.0" y2="225.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="720.0" cy="225.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="794.0" cy="225.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="840.0" y1="225.0" x2="980.0" y2="225.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="886.0" cy="225.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="944.0" cy="225.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<rect x="36" y="96" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="40" y="99" width="32" height="22" fill="#3d8fdc"/><rect x="53" y="126" width="6" height="6" fill="#59606a"/><rect x="45" y="132" width="22" height="3" rx="1" fill="#59606a"/><rect x="80" y="98" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="83" y1="104" x2="89" y2="104" stroke="#59606a"/><circle cx="86" cy="129" r="1.6" fill="#3cb043"/>
+<text x="60.0" y="160.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="60.0" y="174.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-A</text>
+<text x="60.0" y="188.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.1.126/25</text>
+<text x="60.0" y="202.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">IPv6: SLAAC</text>
+<rect x="196" y="114" width="64" height="20" fill="#13548f"/><polygon points="196,114 208,100 272,100 260,114" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><polygon points="260,114 272,100 272,120 260,134" fill="#0d3f6e"/><line x1="212.0" y1="104.0" x2="254.0" y2="104.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/><line x1="250.0" y1="110.0" x2="208.0" y2="110.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/>
+<text x="230.0" y="166.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2960-24TT</text>
+<text x="230.0" y="180.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">SW-A</text>
+<rect x="36" y="306" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="40" y="309" width="32" height="22" fill="#3d8fdc"/><rect x="53" y="336" width="6" height="6" fill="#59606a"/><rect x="45" y="342" width="22" height="3" rx="1" fill="#59606a"/><rect x="80" y="308" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="83" y1="314" x2="89" y2="314" stroke="#59606a"/><circle cx="86" cy="339" r="1.6" fill="#3cb043"/>
+<text x="60.0" y="370.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="60.0" y="384.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-B</text>
+<text x="60.0" y="398.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.1.190/26</text>
+<text x="60.0" y="412.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2001:db8:acad:b::10</text>
+<rect x="196" y="324" width="64" height="20" fill="#13548f"/><polygon points="196,324 208,310 272,310 260,324" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><polygon points="260,324 272,310 272,330 260,344" fill="#0d3f6e"/><line x1="212.0" y1="314.0" x2="254.0" y2="314.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/><line x1="250.0" y1="320.0" x2="208.0" y2="320.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/>
+<text x="230.0" y="376.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2960-24TT</text>
+<text x="230.0" y="390.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">SW-B</text>
+<path d="M388,215.0 L388,235.0 A32,11 0 0 0 452,235.0 L452,215.0 Z" fill="#13548f"/><ellipse cx="420" cy="215.0" rx="32" ry="11" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><line x1="424.0" y1="213.5" x2="440.0" y2="208.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/><line x1="416.0" y1="216.5" x2="400.0" y2="221.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/><line x1="396.0" y1="208.0" x2="412.0" y2="212.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/><line x1="444.0" y1="222.0" x2="428.0" y2="217.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/>
+<text x="420.0" y="141.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">ISR4331</text>
+<text x="420.0" y="155.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">R1</text>
+<text x="420.0" y="169.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">.1 / .129 / .225</text>
+<text x="420.0" y="183.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">fe80::1</text>
+<path d="M648,215.0 L648,235.0 A32,11 0 0 0 712,235.0 L712,215.0 Z" fill="#13548f"/><ellipse cx="680" cy="215.0" rx="32" ry="11" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><line x1="684.0" y1="213.5" x2="700.0" y2="208.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/><line x1="676.0" y1="216.5" x2="660.0" y2="221.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/><line x1="656.0" y1="208.0" x2="672.0" y2="212.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/><line x1="704.0" y1="222.0" x2="688.0" y2="217.5" stroke="#fff" stroke-width="2.2" marker-end="url(#ah)"/>
+<text x="680.0" y="265.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">ISR4331</text>
+<text x="680.0" y="279.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">R2</text>
+<text x="680.0" y="293.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">.193 / .226</text>
+<text x="680.0" y="307.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">fe80::2</text>
+<rect x="806" y="219" width="64" height="20" fill="#13548f"/><polygon points="806,219 818,205 882,205 870,219" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><polygon points="870,219 882,205 882,225 870,239" fill="#0d3f6e"/><line x1="822.0" y1="209.0" x2="864.0" y2="209.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/><line x1="860.0" y1="215.0" x2="818.0" y2="215.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/>
+<text x="840.0" y="271.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2960-24TT</text>
+<text x="840.0" y="285.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">SW-C</text>
+<rect x="956" y="201" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="960" y="204" width="32" height="22" fill="#3d8fdc"/><rect x="973" y="231" width="6" height="6" fill="#59606a"/><rect x="965" y="237" width="22" height="3" rx="1" fill="#59606a"/><rect x="1000" y="203" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="1003" y1="209" x2="1009" y2="209" stroke="#59606a"/><circle cx="1006" cy="234" r="1.6" fill="#3cb043"/>
+<text x="980.0" y="265.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="980.0" y="279.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-C</text>
+<text x="980.0" y="293.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.1.222/27</text>
+<text x="980.0" y="307.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">IPv6: SLAAC</text>
+<text x="114.0" y="135.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="166.0" y="135.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/1</text>
+<text x="280.7" y="164.6" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/1</text>
+<text x="363.9" y="210.6" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/0/0</text>
+<text x="114.0" y="345.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="166.0" y="345.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/1</text>
+<text x="280.7" y="293.4" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/1</text>
+<text x="363.9" y="247.4" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/0/1</text>
+<text x="478.0" y="240.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/0/2</text>
+<text x="622.0" y="240.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/0/2</text>
+<text x="550.0" y="263.0" font-size="11" font-weight="600" fill="#8a4600" text-anchor="middle" font-style="italic" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">WAN 192.168.1.224/30 · 2001:db8:acad:ff::/64</text>
+<text x="738.0" y="240.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/0/0</text>
+<text x="776.0" y="240.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">G0/1</text>
+<text x="904.0" y="240.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/1</text>
+<text x="926.0" y="240.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="150.0" y="58.0" font-size="12" font-weight="600" fill="#8a4600" text-anchor="middle" font-style="italic" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">LAN-A: 100 hosts · 2001:db8:acad:a::/64</text>
+<text x="150.0" y="452.0" font-size="12" font-weight="600" fill="#8a4600" text-anchor="middle" font-style="italic" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">LAN-B: 50 hosts · 2001:db8:acad:b::/64</text>
+<text x="905.0" y="150.0" font-size="12" font-weight="600" fill="#8a4600" text-anchor="middle" font-style="italic" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">LAN-C: 20 hosts · 2001:db8:acad:c::/64</text>
+<line x1="16" y1="478" x2="50" y2="478" stroke="#1f2328" stroke-width="2.2"/>
+<text x="56.0" y="482.0" font-size="11" font-weight="400" fill="#57606a" text-anchor="start" style="">Copper Straight-Through</text>
+<line x1="210.6" y1="478" x2="244.6" y2="478" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<text x="250.6" y="482.0" font-size="11" font-weight="400" fill="#57606a" text-anchor="start" style="">Copper Cross-Over</text>
+<circle cx="372.0" cy="478" r="4" fill="#2ea043"/>
+<text x="381.0" y="482.0" font-size="11" font-weight="400" fill="#57606a" text-anchor="start" style="">Link up</text>
+</svg>

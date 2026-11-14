@@ -22,6 +22,11 @@
 
 ## Topology
 
+![Lab 06 topology](images/topology.svg)
+
+<details>
+<summary>Text version of the topology</summary>
+
 ```
                                           Internet-Web 203.0.113.10
                                                    |  (HTTP + DNS)
@@ -46,6 +51,8 @@
                 Admin-PC      PC1       PC2     Guest-Laptop  Int-Server  Rogue-DHCP
                 (VLAN 99)  (VLAN 10) (VLAN 10)   (VLAN 20)    (VLAN 30)   (VLAN 10, Part 2)
 ```
+
+</details>
 
 ## VLAN and Addressing Table
 

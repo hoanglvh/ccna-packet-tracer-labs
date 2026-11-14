@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" width="960" height="680" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#fff"/></marker></defs>
+<rect width="960" height="680" fill="#ffffff"/>
+<rect x="0.5" y="0.5" width="959" height="679" fill="none" stroke="#d0d7de"/>
+<text x="16.0" y="26.0" font-size="15" font-weight="700" fill="#13548f" text-anchor="start" style="">Lab 04 – STP, EtherChannel &amp; Port Security</text>
+<line x1="475.7" y1="145.7" x2="235.7" y2="385.7" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="443.1" cy="178.2" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="268.2" cy="353.1" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="464.3" y1="134.3" x2="224.3" y2="374.3" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="431.8" cy="166.9" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="256.9" cy="341.8" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="475.7" y1="134.3" x2="715.7" y2="374.3" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="508.2" cy="166.9" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="683.1" cy="341.8" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="464.3" y1="145.7" x2="704.3" y2="385.7" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="496.9" cy="178.2" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="671.8" cy="353.1" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="230.0" y1="372.0" x2="710.0" y2="372.0" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="276.0" cy="372.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="664.0" cy="372.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="230.0" y1="388.0" x2="710.0" y2="388.0" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<circle cx="276.0" cy="388.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="664.0" cy="388.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="470.0" y1="140.0" x2="780.0" y2="140.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="516.0" cy="140.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="744.0" cy="140.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="230.0" y1="380.0" x2="230.0" y2="530.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="230.0" cy="426.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="230.0" cy="494.0" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="710.0" y1="380.0" x2="620.0" y2="530.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="686.3" cy="419.4" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="638.5" cy="499.1" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<line x1="710.0" y1="380.0" x2="800.0" y2="530.0" stroke="#1f2328" stroke-width="2.2"/>
+<circle cx="733.7" cy="419.4" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<circle cx="781.5" cy="499.1" r="4" fill="#2ea043" stroke="#fff" stroke-width="1"/>
+<ellipse cx="350" cy="260" rx="30" ry="16" transform="rotate(-45 350 260)" fill="none" stroke="#8250df" stroke-width="1.6"/>
+<ellipse cx="590" cy="260" rx="30" ry="16" transform="rotate(45 590 260)" fill="none" stroke="#8250df" stroke-width="1.6"/>
+<ellipse cx="470" cy="380" rx="30" ry="16" transform="rotate(0 470 380)" fill="none" stroke="#8250df" stroke-width="1.6"/>
+<rect x="436" y="134" width="64" height="20" fill="#13548f"/><polygon points="436,134 448,120 512,120 500,134" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><polygon points="500,134 512,120 512,140 500,154" fill="#0d3f6e"/><line x1="452.0" y1="124.0" x2="494.0" y2="124.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/><line x1="490.0" y1="130.0" x2="448.0" y2="130.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/>
+<text x="470.0" y="64.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2960-24TT</text>
+<text x="470.0" y="78.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">S1</text>
+<text x="470.0" y="92.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN99 192.168.99.1</text>
+<rect x="196" y="374" width="64" height="20" fill="#13548f"/><polygon points="196,374 208,360 272,360 260,374" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><polygon points="260,374 272,360 272,380 260,394" fill="#0d3f6e"/><line x1="212.0" y1="364.0" x2="254.0" y2="364.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/><line x1="250.0" y1="370.0" x2="208.0" y2="370.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/>
+<text x="180.0" y="368.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="end" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2960-24TT</text>
+<text x="180.0" y="382.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="end" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">S2</text>
+<text x="180.0" y="396.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="end" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN99 192.168.99.2</text>
+<rect x="676" y="374" width="64" height="20" fill="#13548f"/><polygon points="676,374 688,360 752,360 740,374" fill="#2b7bc4" stroke="#13548f" stroke-width="1"/><polygon points="740,374 752,360 752,380 740,394" fill="#0d3f6e"/><line x1="692.0" y1="364.0" x2="734.0" y2="364.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/><line x1="730.0" y1="370.0" x2="688.0" y2="370.0" stroke="#fff" stroke-width="2" marker-end="url(#ah)"/>
+<text x="760.0" y="368.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">2960-24TT</text>
+<text x="760.0" y="382.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">S3</text>
+<text x="760.0" y="396.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN99 192.168.99.3</text>
+<rect x="756" y="116" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="760" y="119" width="32" height="22" fill="#3d8fdc"/><rect x="773" y="146" width="6" height="6" fill="#59606a"/><rect x="765" y="152" width="22" height="3" rx="1" fill="#59606a"/><rect x="800" y="118" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="803" y1="124" x2="809" y2="124" stroke="#59606a"/><circle cx="806" cy="149" r="1.6" fill="#3cb043"/>
+<text x="820.0" y="121.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="820.0" y="135.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC1</text>
+<text x="820.0" y="149.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN 10</text>
+<text x="820.0" y="163.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="start" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.10.11</text>
+<rect x="206" y="506" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="210" y="509" width="32" height="22" fill="#3d8fdc"/><rect x="223" y="536" width="6" height="6" fill="#59606a"/><rect x="215" y="542" width="22" height="3" rx="1" fill="#59606a"/><rect x="250" y="508" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="253" y1="514" x2="259" y2="514" stroke="#59606a"/><circle cx="256" cy="539" r="1.6" fill="#3cb043"/>
+<text x="230.0" y="570.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="230.0" y="584.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC2</text>
+<text x="230.0" y="598.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN 20</text>
+<text x="230.0" y="612.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.20.12</text>
+<rect x="596" y="506" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="600" y="509" width="32" height="22" fill="#3d8fdc"/><rect x="613" y="536" width="6" height="6" fill="#59606a"/><rect x="605" y="542" width="22" height="3" rx="1" fill="#59606a"/><rect x="640" y="508" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="643" y1="514" x2="649" y2="514" stroke="#59606a"/><circle cx="646" cy="539" r="1.6" fill="#3cb043"/>
+<text x="620.0" y="570.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="620.0" y="584.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC3</text>
+<text x="620.0" y="598.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN 10</text>
+<text x="620.0" y="612.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.10.13</text>
+<rect x="776" y="506" width="40" height="30" rx="2" fill="#dfe3e8" stroke="#59606a"/><rect x="780" y="509" width="32" height="22" fill="#3d8fdc"/><rect x="793" y="536" width="6" height="6" fill="#59606a"/><rect x="785" y="542" width="22" height="3" rx="1" fill="#59606a"/><rect x="820" y="508" width="12" height="37" rx="1.5" fill="#dfe3e8" stroke="#59606a"/><line x1="823" y1="514" x2="829" y2="514" stroke="#59606a"/><circle cx="826" cy="539" r="1.6" fill="#3cb043"/>
+<text x="800.0" y="570.0" font-size="10.5" font-weight="400" fill="#57606a" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC-PT</text>
+<text x="800.0" y="584.0" font-size="13" font-weight="700" fill="#1f2328" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">PC4</text>
+<text x="800.0" y="598.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">VLAN 20</text>
+<text x="800.0" y="612.0" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">192.168.20.14</text>
+<text x="431.1" y="209.8" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/1</text>
+<text x="295.8" y="345.1" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/1</text>
+<text x="404.2" y="182.9" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/2</text>
+<text x="268.9" y="318.2" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/2</text>
+<text x="535.8" y="182.9" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/3</text>
+<text x="671.1" y="318.2" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/3</text>
+<text x="508.9" y="209.8" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/4</text>
+<text x="644.2" y="345.1" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/4</text>
+<text x="304.0" y="365.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/3</text>
+<text x="636.0" y="365.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/1</text>
+<text x="304.0" y="403.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/4</text>
+<text x="636.0" y="403.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/2</text>
+<text x="534.0" y="155.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/6</text>
+<text x="726.0" y="155.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="219.0" y="448.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/18</text>
+<text x="219.0" y="480.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="667.6" y="433.2" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/6</text>
+<text x="638.4" y="482.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="752.4" y="433.2" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">F0/18</text>
+<text x="781.6" y="482.0" font-size="10.5" font-weight="500" fill="#0a3069" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Fa0</text>
+<text x="285.0" y="250.0" font-size="11.5" font-weight="700" fill="#8250df" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Po1 · LACP</text>
+<text x="655.0" y="250.0" font-size="11.5" font-weight="700" fill="#8250df" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Po2 · LACP</text>
+<text x="470.0" y="414.0" font-size="11.5" font-weight="700" fill="#8250df" text-anchor="middle" style="paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round">Po3 · PAgP</text>
+<line x1="16" y1="658" x2="50" y2="658" stroke="#1f2328" stroke-width="2.2"/>
+<text x="56.0" y="662.0" font-size="11" font-weight="400" fill="#57606a" text-anchor="start" style="">Copper Straight-Through</text>
+<line x1="210.6" y1="658" x2="244.6" y2="658" stroke="#1f2328" stroke-width="2.2" stroke-dasharray="9 5"/>
+<text x="250.6" y="662.0" font-size="11" font-weight="400" fill="#57606a" text-anchor="start" style="">Copper Cross-Over</text>
+<circle cx="372.0" cy="658" r="4" fill="#2ea043"/>
+<text x="381.0" y="662.0" font-size="11" font-weight="400" fill="#57606a" text-anchor="start" style="">Link up</text>
+</svg>

@@ -42,18 +42,21 @@ ccna-packet-tracer-labs/
 └── labs/
     ├── lab01-pt-intro-basic-config/
     │   ├── README.md             ← step-by-step lab guide
+    │   ├── images/topology.svg   ← Packet-Tracer-style topology diagram
     │   └── solutions/            ← final device configs + answer key
     ├── lab02-ipv4-subnetting-ipv6/
     ├── lab03-vlans-intervlan-routing/
     ├── lab04-stp-etherchannel-port-security/
     ├── lab05-static-routing-ospf/
     └── lab06-dhcp-nat-acl-capstone/
+
+tools/generate_topologies.py      ← regenerates every labs/*/images/topology.svg
 ```
 
 Each lab guide contains:
 
 1. **Objectives** and required devices
-2. **Topology diagram** and **addressing table**
+2. **Topology diagram** (Packet-Tracer-style device icons, ports, cables, link lights) and **addressing table**
 3. **Five periods**, each split into numbered *Parts* and *Steps* with exact commands
 4. **Verification** commands with the expected output to look for
 5. **Troubleshooting** tips and a **challenge** task

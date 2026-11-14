@@ -21,6 +21,11 @@
 
 ## Topology
 
+![Lab 03 topology](images/topology.svg)
+
+<details>
+<summary>Text version of the topology</summary>
+
 ```
         Part A – Router-on-a-Stick                 Part B – Layer 3 switch (Period 14)
 
@@ -38,6 +43,8 @@
              PC1     PC2         PC3    PC4    PC5         PC6     PC7
             (V10)   (V20)       (V10)  (V20)  (V30)       (V10)   (V20)
 ```
+
+</details>
 
 ## VLAN Table
 
