@@ -11,6 +11,8 @@ A complete, step-by-step **practical lab course** for the Cisco CCNA (200-301) c
 | Language | English |
 | Level | CCNA (beginner → intermediate) |
 
+> 📘 **Download the ebook (PDF, 123 pages):** [CCNA-Packet-Tracer-Labs.pdf](https://github.com/hoanglvh/ccna-packet-tracer-labs/releases/latest/download/CCNA-Packet-Tracer-Labs.pdf) – all six lab guides, syllabus, quick-start, cheat sheet, instructor guide, answer keys and solution configs in one file. Rebuild it with `python3 tools/build_ebook.py` (needs `pip install markdown playwright` and Google Chrome).
+
 ---
 
 ## Course Map
@@ -52,6 +54,7 @@ ccna-packet-tracer-labs/
 
 tools/generate_topologies.py      ← regenerates every labs/*/images/topology.svg
 tools/verify_solutions.py         ← offline simulator that checks every solution config
+tools/build_ebook.py              ← builds ebook/CCNA-Packet-Tracer-Labs.pdf from the guides
 ```
 
 Each lab guide contains:
